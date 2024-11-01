@@ -1,6 +1,5 @@
-package net.iba.hibernate.example;
+package net.iba.hibernate.criteria;
 
-import net.iba.hibernate.example.model.Developer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,7 +12,8 @@ public class DeveloperRunner {
 
     public static void main(String[] args) {
         sessionFactory = new Configuration().configure().buildSessionFactory();
-
+        Configuration configuration = new Configuration();
+        configuration.addAnnotatedClass(Developer.class);
         DeveloperRunner developerRunner = new DeveloperRunner();
 
         System.out.println("Adding developer's records to the DB");

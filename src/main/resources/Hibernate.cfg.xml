@@ -23,7 +23,7 @@
         </property>
 
         <!-- List of XML mapping files -->
-        <mapping resource="Developer.hbm.xml"/>
+        <mapping class="net.iba.hibernate.criteria.Developer"/>
 
     </session-factory>
 </hibernate-configuration>
